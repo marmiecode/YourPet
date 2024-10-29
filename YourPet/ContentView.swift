@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  YourPet
-//
-//  Created by Martyna Mieczkowska on 29/10/2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {

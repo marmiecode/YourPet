@@ -1,17 +1,20 @@
-//
-//  YourPetApp.swift
-//  YourPet
-//
-//  Created by Martyna Mieczkowska on 29/10/2024.
-//
-
 import SwiftUI
+import FirebaseCore
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+    return true
+  }
+}
 
 @main
 struct YourPetApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }

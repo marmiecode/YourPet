@@ -13,6 +13,8 @@
 		950468992CD2E4B3004F5A57 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 950468982CD2E4B3004F5A57 /* FirebaseAppCheck */; };
 		9504689B2CD2E4B3004F5A57 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 9504689A2CD2E4B3004F5A57 /* FirebaseAppDistribution-Beta */; };
 		950468E22CD3006D004F5A57 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 950468E12CD3006D004F5A57 /* FirebaseAuth */; };
+		95D44B532CE172C200BB2B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D44B4E2CE172C200BB2B57 /* Assets.xcassets */; };
+		95D44B542CE172C200BB2B57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D44B502CE172C200BB2B57 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,25 +38,9 @@
 		956128F72CD191080059CA67 /* YourPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956129072CD1910A0059CA67 /* YourPetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourPetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		956129112CD1910A0059CA67 /* YourPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D44B4E2CE172C200BB2B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D44B502CE172C200BB2B57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		956128F92CD191080059CA67 /* YourPet */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = YourPet;
-			sourceTree = "<group>";
-		};
-		9561290A2CD1910A0059CA67 /* YourPetTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = YourPetTests;
-			sourceTree = "<group>";
-		};
-		956129142CD1910A0059CA67 /* YourPetUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = YourPetUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		956128F42CD191080059CA67 /* Frameworks */ = {
@@ -97,9 +83,7 @@
 		956128EE2CD191080059CA67 = {
 			isa = PBXGroup;
 			children = (
-				956128F92CD191080059CA67 /* YourPet */,
-				9561290A2CD1910A0059CA67 /* YourPetTests */,
-				956129142CD1910A0059CA67 /* YourPetUITests */,
+				95D44B5D2CE172DA00BB2B57 /* YourPet */,
 				950468E02CD3006D004F5A57 /* Frameworks */,
 				956128F82CD191080059CA67 /* Products */,
 			);
@@ -113,6 +97,23 @@
 				956129112CD1910A0059CA67 /* YourPetUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		95D44B5D2CE172DA00BB2B57 /* YourPet */ = {
+			isa = PBXGroup;
+			children = (
+				95D44B5E2CE1731200BB2B57 /* Preview Content */,
+				95D44B502CE172C200BB2B57 /* GoogleService-Info.plist */,
+			);
+			path = YourPet;
+			sourceTree = "<group>";
+		};
+		95D44B5E2CE1731200BB2B57 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				95D44B4E2CE172C200BB2B57 /* Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +130,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				956128F92CD191080059CA67 /* YourPet */,
 			);
 			name = YourPet;
 			packageProductDependencies = (
@@ -159,9 +157,6 @@
 			dependencies = (
 				956129092CD1910A0059CA67 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				9561290A2CD1910A0059CA67 /* YourPetTests */,
-			);
 			name = YourPetTests;
 			packageProductDependencies = (
 			);
@@ -181,9 +176,6 @@
 			);
 			dependencies = (
 				956129132CD1910A0059CA67 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				956129142CD1910A0059CA67 /* YourPetUITests */,
 			);
 			name = YourPetUITests;
 			packageProductDependencies = (
@@ -244,6 +236,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D44B532CE172C200BB2B57 /* Assets.xcassets in Resources */,
+				95D44B542CE172C200BB2B57 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

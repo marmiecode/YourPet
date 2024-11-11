@@ -13,6 +13,23 @@
 		950468992CD2E4B3004F5A57 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 950468982CD2E4B3004F5A57 /* FirebaseAppCheck */; };
 		9504689B2CD2E4B3004F5A57 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 9504689A2CD2E4B3004F5A57 /* FirebaseAppDistribution-Beta */; };
 		950468E22CD3006D004F5A57 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 950468E12CD3006D004F5A57 /* FirebaseAuth */; };
+		95D44BDC2CE17BF700BB2B57 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BCF2CE17BF700BB2B57 /* FirebaseAuthService.swift */; };
+		95D44BDD2CE17BF700BB2B57 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BD12CE17BF700BB2B57 /* AuthViewModel.swift */; };
+		95D44BDE2CE17BF700BB2B57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BD32CE17BF700BB2B57 /* ContentView.swift */; };
+		95D44BDF2CE17BF700BB2B57 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BD42CE17BF700BB2B57 /* LoginView.swift */; };
+		95D44BE02CE17BF700BB2B57 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BD52CE17BF700BB2B57 /* MainView.swift */; };
+		95D44BE12CE17BF700BB2B57 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BD62CE17BF700BB2B57 /* RegisterView.swift */; };
+		95D44BE22CE17BF700BB2B57 /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BDA2CE17BF700BB2B57 /* Untitled.swift */; };
+		95D44BE32CE17BF700BB2B57 /* YourPetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BDB2CE17BF700BB2B57 /* YourPetApp.swift */; };
+		95D44BE42CE17BF700BB2B57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D44BCD2CE17BF700BB2B57 /* Preview Assets.xcassets */; };
+		95D44BE52CE17BF700BB2B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D44BD82CE17BF700BB2B57 /* Assets.xcassets */; };
+		95D44BE62CE17BF700BB2B57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D44BD92CE17BF700BB2B57 /* GoogleService-Info.plist */; };
+		95D44BF62CE18C6600BB2B57 /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BF52CE18C6600BB2B57 /* NavigationModifier.swift */; };
+		95D44BF82CE18C9500BB2B57 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BF72CE18C9500BB2B57 /* NavigationDestination.swift */; };
+		95D44BFB2CE18CC700BB2B57 /* NavigationDestination+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BFA2CE18CC700BB2B57 /* NavigationDestination+Hashable.swift */; };
+		95D44C092CE18ED600BB2B57 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44C082CE18ED600BB2B57 /* AuthManager.swift */; };
+		95D44C0C2CE18F2C00BB2B57 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44C0B2CE18F2C00BB2B57 /* AuthViewModel.swift */; };
+		95D44C102CE18F8E00BB2B57 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44C0F2CE18F8E00BB2B57 /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +53,26 @@
 		956128F72CD191080059CA67 /* YourPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956129072CD1910A0059CA67 /* YourPetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourPetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		956129112CD1910A0059CA67 /* YourPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D44BCD2CE17BF700BB2B57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95D44BCF2CE17BF700BB2B57 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		95D44BD12CE17BF700BB2B57 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		95D44BD32CE17BF700BB2B57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95D44BD42CE17BF700BB2B57 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		95D44BD52CE17BF700BB2B57 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		95D44BD62CE17BF700BB2B57 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		95D44BD82CE17BF700BB2B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D44BD92CE17BF700BB2B57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		95D44BDA2CE17BF700BB2B57 /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
+		95D44BDB2CE17BF700BB2B57 /* YourPetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourPetApp.swift; sourceTree = "<group>"; };
+		95D44BF52CE18C6600BB2B57 /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
+		95D44BF72CE18C9500BB2B57 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		95D44BFA2CE18CC700BB2B57 /* NavigationDestination+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDestination+Hashable.swift"; sourceTree = "<group>"; };
+		95D44C082CE18ED600BB2B57 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		95D44C0B2CE18F2C00BB2B57 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		95D44C0F2CE18F8E00BB2B57 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		956128F92CD191080059CA67 /* YourPet */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = YourPet;
-			sourceTree = "<group>";
-		};
 		9561290A2CD1910A0059CA67 /* YourPetTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = YourPetTests;
@@ -97,10 +126,9 @@
 		956128EE2CD191080059CA67 = {
 			isa = PBXGroup;
 			children = (
-				956128F92CD191080059CA67 /* YourPet */,
+				95D44BED2CE17C0A00BB2B57 /* YourPet */,
 				9561290A2CD1910A0059CA67 /* YourPetTests */,
 				956129142CD1910A0059CA67 /* YourPetUITests */,
-				950468E02CD3006D004F5A57 /* Frameworks */,
 				956128F82CD191080059CA67 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +141,95 @@
 				956129112CD1910A0059CA67 /* YourPetUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		95D44BED2CE17C0A00BB2B57 /* YourPet */ = {
+			isa = PBXGroup;
+			children = (
+				95D44C062CE18EA300BB2B57 /* Source */,
+				95D44BF32CE18C1F00BB2B57 /* Navigation */,
+				950468E02CD3006D004F5A57 /* Frameworks */,
+				95D44BDA2CE17BF700BB2B57 /* Untitled.swift */,
+				95D44BDB2CE17BF700BB2B57 /* YourPetApp.swift */,
+				95D44BD92CE17BF700BB2B57 /* GoogleService-Info.plist */,
+				95D44BD82CE17BF700BB2B57 /* Assets.xcassets */,
+				95D44BF22CE17C8C00BB2B57 /* Views */,
+				95D44BF12CE17C6D00BB2B57 /* ViewModels */,
+				95D44BEE2CE17C1900BB2B57 /* Preview Content */,
+			);
+			path = YourPet;
+			sourceTree = "<group>";
+		};
+		95D44BEE2CE17C1900BB2B57 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				95D44BCD2CE17BF700BB2B57 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95D44BEF2CE17C3100BB2B57 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				95D44BCF2CE17BF700BB2B57 /* FirebaseAuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		95D44BF12CE17C6D00BB2B57 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				95D44BD12CE17BF700BB2B57 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		95D44BF22CE17C8C00BB2B57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95D44BD52CE17BF700BB2B57 /* MainView.swift */,
+				95D44BD32CE17BF700BB2B57 /* ContentView.swift */,
+				95D44BD42CE17BF700BB2B57 /* LoginView.swift */,
+				95D44BD62CE17BF700BB2B57 /* RegisterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		95D44BF32CE18C1F00BB2B57 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				95D44BF42CE18C2800BB2B57 /* NavigationModifier */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		95D44BF42CE18C2800BB2B57 /* NavigationModifier */ = {
+			isa = PBXGroup;
+			children = (
+				95D44BF52CE18C6600BB2B57 /* NavigationModifier.swift */,
+				95D44BF72CE18C9500BB2B57 /* NavigationDestination.swift */,
+				95D44BFA2CE18CC700BB2B57 /* NavigationDestination+Hashable.swift */,
+			);
+			path = NavigationModifier;
+			sourceTree = "<group>";
+		};
+		95D44C062CE18EA300BB2B57 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				95D44C072CE18EBA00BB2B57 /* Auth */,
+				95D44BEF2CE17C3100BB2B57 /* Services */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		95D44C072CE18EBA00BB2B57 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				95D44C082CE18ED600BB2B57 /* AuthManager.swift */,
+				95D44C0B2CE18F2C00BB2B57 /* AuthViewModel.swift */,
+				95D44C0F2CE18F8E00BB2B57 /* AuthView.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +246,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				956128F92CD191080059CA67 /* YourPet */,
 			);
 			name = YourPet;
 			packageProductDependencies = (
@@ -244,6 +358,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D44BE42CE17BF700BB2B57 /* Preview Assets.xcassets in Resources */,
+				95D44BE52CE17BF700BB2B57 /* Assets.xcassets in Resources */,
+				95D44BE62CE17BF700BB2B57 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +385,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D44C102CE18F8E00BB2B57 /* AuthView.swift in Sources */,
+				95D44BDC2CE17BF700BB2B57 /* FirebaseAuthService.swift in Sources */,
+				95D44C092CE18ED600BB2B57 /* AuthManager.swift in Sources */,
+				95D44BDD2CE17BF700BB2B57 /* AuthViewModel.swift in Sources */,
+				95D44BDE2CE17BF700BB2B57 /* ContentView.swift in Sources */,
+				95D44BDF2CE17BF700BB2B57 /* LoginView.swift in Sources */,
+				95D44BF82CE18C9500BB2B57 /* NavigationDestination.swift in Sources */,
+				95D44BE02CE17BF700BB2B57 /* MainView.swift in Sources */,
+				95D44BE12CE17BF700BB2B57 /* RegisterView.swift in Sources */,
+				95D44BFB2CE18CC700BB2B57 /* NavigationDestination+Hashable.swift in Sources */,
+				95D44BE22CE17BF700BB2B57 /* Untitled.swift in Sources */,
+				95D44BF62CE18C6600BB2B57 /* NavigationModifier.swift in Sources */,
+				95D44C0C2CE18F2C00BB2B57 /* AuthViewModel.swift in Sources */,
+				95D44BE32CE17BF700BB2B57 /* YourPetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

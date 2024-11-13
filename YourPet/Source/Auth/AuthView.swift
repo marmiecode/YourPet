@@ -7,7 +7,6 @@ struct AuthView: View {
   @ViewBuilder
   var body: some View {
     ZStack {
-      // TODO: change isUserLoggedIn to enum with state loading userloggedIn and userNotLogged
       if viewModel.isUserLoggedIn == true {
         NavigationDestination
           .mainTabBar(viewModel: viewModel.getMainTabBarViewModel())

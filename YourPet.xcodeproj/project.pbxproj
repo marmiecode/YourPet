@@ -17,6 +17,10 @@
 		9533A9E22CED596600094788 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533A9E12CED596600094788 /* RouterView.swift */; };
 		9533A9E52CF1483300094788 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533A9E42CF1483300094788 /* HomeViewModel.swift */; };
 		9533A9E72CF1485200094788 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533A9E62CF1485200094788 /* HomeView.swift */; };
+		95AC2D7D2CF771E7003C293E /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC2D7C2CF771E7003C293E /* PetModel.swift */; };
+		95AC2D7F2CF77236003C293E /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC2D7E2CF77236003C293E /* FirestoreService.swift */; };
+		95AC2D812CF774B7003C293E /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC2D802CF774B7003C293E /* PetViewModel.swift */; };
+		95AC2D832CF77517003C293E /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC2D822CF77517003C293E /* PetView.swift */; };
 		95D44BDC2CE17BF700BB2B57 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BCF2CE17BF700BB2B57 /* FirebaseAuthService.swift */; };
 		95D44BDD2CE17BF700BB2B57 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BD12CE17BF700BB2B57 /* AuthViewModel.swift */; };
 		95D44BE22CE17BF700BB2B57 /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D44BDA2CE17BF700BB2B57 /* Untitled.swift */; };
@@ -69,6 +73,10 @@
 		956128F72CD191080059CA67 /* YourPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956129072CD1910A0059CA67 /* YourPetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourPetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		956129112CD1910A0059CA67 /* YourPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95AC2D7C2CF771E7003C293E /* PetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
+		95AC2D7E2CF77236003C293E /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		95AC2D802CF774B7003C293E /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
+		95AC2D822CF77517003C293E /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
 		95D44BCD2CE17BF700BB2B57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95D44BCF2CE17BF700BB2B57 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		95D44BD12CE17BF700BB2B57 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -176,6 +184,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		95AC2D7B2CF771C3003C293E /* AddDocument */ = {
+			isa = PBXGroup;
+			children = (
+				95AC2D7C2CF771E7003C293E /* PetModel.swift */,
+				95AC2D802CF774B7003C293E /* PetViewModel.swift */,
+				95AC2D822CF77517003C293E /* PetView.swift */,
+			);
+			path = AddDocument;
+			sourceTree = "<group>";
+		};
 		95D44BED2CE17C0A00BB2B57 /* YourPet */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				95D44BCF2CE17BF700BB2B57 /* FirebaseAuthService.swift */,
+				95AC2D7E2CF77236003C293E /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -237,6 +256,7 @@
 		95D44C062CE18EA300BB2B57 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				95AC2D7B2CF771C3003C293E /* AddDocument */,
 				95D44C152CE41C6100BB2B57 /* MainTapBar */,
 				95D44C072CE18EBA00BB2B57 /* Auth */,
 				95D44BEF2CE17C3100BB2B57 /* Services */,
@@ -483,13 +503,17 @@
 				95D44C4F2CE502C200BB2B57 /* ContentView.swift in Sources */,
 				95D44BF62CE18C6600BB2B57 /* NavigationDestination.swift in Sources */,
 				95D44C3F2CE4FD6D00BB2B57 /* MapView.swift in Sources */,
+				95AC2D7D2CF771E7003C293E /* PetModel.swift in Sources */,
 				95D44C402CE4FD6D00BB2B57 /* MapDetailsViewModel.swift in Sources */,
+				95AC2D812CF774B7003C293E /* PetViewModel.swift in Sources */,
 				95D44C412CE4FD6D00BB2B57 /* MapViewModel.swift in Sources */,
 				95D44C422CE4FD6D00BB2B57 /* MapDetailsView.swift in Sources */,
 				95D44C452CE5016400BB2B57 /* RegisterViewModel.swift in Sources */,
 				95D44C472CE5017A00BB2B57 /* RegisterView.swift in Sources */,
 				95D44C4D2CE501DE00BB2B57 /* LoginView.swift in Sources */,
+				95AC2D7F2CF77236003C293E /* FirestoreService.swift in Sources */,
 				95D44C172CE41CF700BB2B57 /* MainTapBarViewModel.swift in Sources */,
+				95AC2D832CF77517003C293E /* PetView.swift in Sources */,
 				9533A9E52CF1483300094788 /* HomeViewModel.swift in Sources */,
 				95D44C2E2CE436D100BB2B57 /* QrCodeView.swift in Sources */,
 				95D44C4B2CE501C900BB2B57 /* LoginViewModel.swift in Sources */,

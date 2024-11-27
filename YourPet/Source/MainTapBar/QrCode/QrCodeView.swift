@@ -1,24 +1,15 @@
 import SwiftUI
 
 struct QrCodeView: View {
-  @EnvironmentObject var viewModel: QrCodeViewModel
-  @State private var navDestination: NavigationDestination?
+  @EnvironmentObject var router: Router
+  @EnvironmentObject var authViewModel: AuthViewModel
   
   var body: some View {
     VStack {
-      Button("QR details") {
-        navDestination = .qrCodeDetails(viewModel: viewModel.getQrCodeDetailsViewModel())
+      Button("Przejdź do QR Details") {
+        router.navigate(to: .qrCodeDetails)
       }
     }
-    .navigationTitle("Qr")
-    .navigationListener($navDestination)
+    .navigationTitle("QR")
   }
 }
-
-struct QrCodeView_Previews: PreviewProvider {
-  static var previews: some View {
-    QrCodeView()
-      .environmentObject(QrCodeViewModel(authManager: AuthManager()))
-  }
-}
-

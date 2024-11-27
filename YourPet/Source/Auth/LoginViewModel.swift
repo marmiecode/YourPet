@@ -1,29 +1,33 @@
 import Foundation
-import Combine
-import FirebaseAuth
 
-class LoginViewModel: ObservableObject, Identifiable {
-  @Published var email: String = ""
-  @Published var password: String = ""
-  @Published var isLoading: Bool = false
+@MainActor
+final class LoginViewModel: ObservableObject {
+  @Published var email = ""
+  @Published var password = ""
+  @Published var isLoading = false
   @Published var errorMessage: String?
   
-  private var cancellables = Set<AnyCancellable>()
+  private let authViewModel: AuthViewModel
   
-  func login() {
-    isLoading = true
-    errorMessage = nil
+  init(authViewModel: AuthViewModel) {
+    self.authViewModel = authViewModel
+  }
+  
+  func login() async -> Bool {
+    guard !email.isEmpty, !password.isEmpty else {
+      errorMessage = "Email and password cannot be empty."
+      return false
+    }
     
-    Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
-      DispatchQueue.main.async {
-        self?.isLoading = false
-        
-        if let error = error {
-          self?.errorMessage = error.localizedDescription
-        } else {
-          // Handle successful login, navigate to the main content view
-        }
-      }
+    isLoading = true
+    defer { isLoading = false }
+    
+    do {
+      await authViewModel.login(email: email, password: password)
+      return true
+    } catch {
+      errorMessage = error.localizedDescription
+      return false
     }
   }
 }

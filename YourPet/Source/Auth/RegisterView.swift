@@ -1,43 +1,47 @@
 import SwiftUI
 
 struct RegisterView: View {
-  @StateObject private var viewModel = RegisterViewModel()
-  @Environment(\.dismiss) private var dismiss
+  @StateObject private var viewModel: RegisterViewModel
+  @EnvironmentObject var authViewModel: AuthViewModel
+  @EnvironmentObject var router: Router
+  
+  init(authViewModel: AuthViewModel) {
+    _viewModel = StateObject(wrappedValue: RegisterViewModel(authViewModel: authViewModel))
+  }
   
   var body: some View {
-    VStack {
-      Text("Register")
-        .font(.largeTitle)
-        .bold()
-      
+    VStack(spacing: 16) {
       TextField("Email", text: $viewModel.email)
         .textFieldStyle(RoundedBorderTextFieldStyle())
         .keyboardType(.emailAddress)
         .autocapitalization(.none)
-        .padding(.horizontal)
+        .disableAutocorrection(true)
       
       SecureField("Password", text: $viewModel.password)
         .textFieldStyle(RoundedBorderTextFieldStyle())
-        .padding(.horizontal)
       
       if let errorMessage = viewModel.errorMessage {
         Text(errorMessage)
           .foregroundColor(.red)
-          .padding(.horizontal)
+          .font(.footnote)
       }
       
       Button("Register") {
-        viewModel.register()
+        Task {
+          let success = await viewModel.register()
+          if success {
+            router.navigate(to: .home)
+          }
+        }
       }
-      .padding()
+      .buttonStyle(.borderedProminent)
       .disabled(viewModel.isLoading)
       
-      Button("Already have an account? Login") {
-        dismiss()
+      // Przycisk powrotu do ekranu logowania
+      Button("Back to Login") {
+        router.pop()
       }
-      .padding()
     }
     .padding()
-    .navigationTitle("Register")
   }
 }

@@ -1,40 +1,35 @@
 import SwiftUI
-import FirebaseAuth
 
 struct ContentView: View {
-  @State private var isLoggedIn = Auth.auth().currentUser != nil
+  @StateObject var router = Router()
+  @StateObject var authViewModel = AuthViewModel()
   
   var body: some View {
-    NavigationView {
-      if isLoggedIn {
-        Text("Welcome! You are logged in.")
-          .navigationTitle("Home")
-          .toolbar {
-            Button("Logout") {
-              logout()
-            }
-          }
+    NavigationStack(path: $router.currentPath) {
+      if authViewModel.isAuthenticated {
+        MainTabBarView()
+          .environmentObject(router)
+          .environmentObject(authViewModel)
       } else {
         LoginView()
+          .environmentObject(authViewModel)
+          .environmentObject(router)
       }
     }
-    .onAppear {
-      checkAuthentication()
-    }
-  }
-  
-  private func logout() {
-    do {
-      try Auth.auth().signOut()
-      isLoggedIn = false
-    } catch {
-      print("Failed to log out: \(error.localizedDescription)")
-    }
-  }
-  
-  private func checkAuthentication() {
-    Auth.auth().addStateDidChangeListener { _, user in
-      isLoggedIn = user != nil
+    .navigationDestination(for: Router.Route.self) { route in
+      switch route {
+      case .home:
+        HomeView()
+          .environmentObject(router)
+      case .qrCode:
+        QrCodeView()
+          .environmentObject(router)
+          .environmentObject(authViewModel)
+      case .map:
+        MapView()
+          .environmentObject(router)
+          .environmentObject(authViewModel)
+      }
     }
   }
 }

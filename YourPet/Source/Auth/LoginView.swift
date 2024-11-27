@@ -1,47 +1,41 @@
 import SwiftUI
 
 struct LoginView: View {
-  @StateObject private var viewModel = LoginViewModel()
-  @State private var showRegister = false
+  @StateObject private var viewModel: LoginViewModel
+  @EnvironmentObject var router: Router
+  
+  init(authViewModel: AuthViewModel) {
+    _viewModel = StateObject(wrappedValue: LoginViewModel(authViewModel: authViewModel))
+  }
   
   var body: some View {
-    VStack {
-      Text("Login")
-        .font(.largeTitle)
-        .bold()
-      
+    VStack(spacing: 16) {
       TextField("Email", text: $viewModel.email)
         .textFieldStyle(RoundedBorderTextFieldStyle())
-        .keyboardType(.emailAddress)
-        .autocapitalization(.none)
-        .padding(.horizontal)
       
       SecureField("Password", text: $viewModel.password)
         .textFieldStyle(RoundedBorderTextFieldStyle())
-        .padding(.horizontal)
       
       if let errorMessage = viewModel.errorMessage {
         Text(errorMessage)
           .foregroundColor(.red)
-          .padding(.horizontal)
+          .font(.footnote)
       }
       
-      Button("Login") {
-        viewModel.login()
+      Button("Log in") {
+        Task {
+          let success = await viewModel.login()
+          if success {
+            router.navigate(to: .home)
+          }
+        }
       }
-      .padding()
-      .disabled(viewModel.isLoading)
+      .buttonStyle(.borderedProminent)
       
-      Button("Don't have an account? Register") {
-        showRegister.toggle()
-      }
-      .padding()
-      .sheet(isPresented: $showRegister) {
-        RegisterView()
+      Button("Go to Register") {
+        router.navigate(to: .register)
       }
     }
     .padding()
-    .navigationTitle("Login")
   }
 }
-

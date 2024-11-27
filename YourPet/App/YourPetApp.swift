@@ -12,9 +12,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct YourPetApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+  var router = Router()
+  
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      if #available(iOS 16.0, *) {
+        ContentView(router: router)
+      } else {
+        Text("This app requires iOS 16.0 or newer.")
+      }
     }
   }
 }

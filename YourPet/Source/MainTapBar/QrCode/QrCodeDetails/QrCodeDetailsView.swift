@@ -1,20 +1,10 @@
 import SwiftUI
 
 struct QrCodeDetailsView: View {
-  @EnvironmentObject var viewModel: QrCodeViewModel
-  
   var body: some View {
     VStack {
-      Text(viewModel.title)
+      Text("QR Code Details")
     }
-    .navigationTitle(viewModel.navigationTitle)
+    .navigationTitle("QR Details")
   }
 }
-
-struct QrCodeDetailsView_Previews: PreviewProvider {
-  static var previews: some View {
-    QrCodeDetailsView()
-      .environmentObject(QrCodeDetailsViewModel(authManager: AuthManager()))
-  }
-}
-
